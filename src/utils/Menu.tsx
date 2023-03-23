@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function Menu(){
     const activeClass = "active";
     return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-primary">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" activeClassName={activeClass}  to="/">Inicio</NavLink>
                 <div className="collapse navbar-collapse">
