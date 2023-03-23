@@ -1,0 +1,45 @@
+
+.div{
+    margin-right: 2%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.div p{
+    height: 44px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.div img{
+    width: 960px;
+    height: 540px;
+}
+
+.div a{
+    text-decoration: none;
+}
+
+.div iframe{
+    border: 0;
+    width: 960px;
+    height: 540px;
+}
+
+.buttonTelephone{
+    background-color: blue;
+    color: white;
+    padding: 15px 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;  
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none; 
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+.buttonTelephone:hover{ 
+    box-shadow: 0 0 30px 0 blue;
+    color: orange;
+}
