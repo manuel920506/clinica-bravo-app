@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ImageSlider(props: imageSliderProps){
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +19,7 @@ export default function ImageSlider(props: imageSliderProps){
         top: '50%',
         transform: 'translate(0, -50%)',
         left: '32px',
-        fontSize: '80px',
+        fontSize: '100px',
         color: '#fff',
         zIndex: 1,
         cursor: 'pointer'  
@@ -29,7 +29,7 @@ export default function ImageSlider(props: imageSliderProps){
         top: '50%',
         transform: 'translate(0, -50%)',
         right: '32px',
-        fontSize: '80px',
+        fontSize: '100px',
         color: '#fff',
         zIndex: 1,
         cursor: 'pointer'  
@@ -46,6 +46,15 @@ export default function ImageSlider(props: imageSliderProps){
         const newIndex = isLastSlide ? 0 : currentIndex +1;
         setCurrentIndex(newIndex);
     }
+
+    useEffect(() => {
+        const timerId = setInterval(() => {
+            goToNext();
+        }, 2000);
+
+        return () => clearInterval(timerId);
+    });
+
     return(
         <div style={sliderStyles}>
             <div style={leftArrowStyles} onClick={goToPrevious} > ‹ </div>
