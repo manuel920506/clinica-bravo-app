@@ -1,5 +1,14 @@
 {
     "welcome" : "Clinica Medica Bravo. La tua clinica ispanica a Houston!",
     "app_title": "Clinica Medica Bravo - Clinica medica a Houston",
-    "language": "Lingua"
+    "language": "Lingua",
+    "business_hours": "Orario di apertura",
+    "monday": "Lunedì",
+    "tuesday": "Martedì",
+    "wednesday": "Mercoledì",
+    "thursday": "Giovedì",
+    "friday": "Venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica",
+    "closed": "Chiuso"
 }

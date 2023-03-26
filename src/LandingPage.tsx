@@ -67,23 +67,22 @@ export default function LandingPage(){
         </svg>
       );
 
-      // const currentLanguageCode = cookies.get('i18next') || 'en';
-      // const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+      const currentLanguageCode = cookies.get('i18next') || 'en';
+      const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
       const { t } = useTranslation();
     
-      // useEffect(() => {
-      //   document.title = t('app_title')
-      // }, [t])
+      useEffect(() => {
+        document.title = t('app_title')
+      }, [t])
 
     const srcMap ="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156599.02913862895!2d-95.58195123547503!3d29.853245035547772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640cf3256fcb201%3A0x64accb7afafb55c6!2s8795%20Antoine%20Dr%2C%20Houston%2C%20TX%2077088!5e0!3m2!1sen!2sus!4v1679603170332!5m2!1sen!2sus";
  
     return(
             <> 
                <div className='container'>
-                <div className={css.div}>
-                    <h1>{t("welcome")}</h1>  
+                <div className={css.div}> 
 
-                    <GlobeIcon />
+                    <h1>{t("welcome")}</h1>   
 
                     <div style={containerStyle} className='img-fluid'>
                         <ImageSlider slides={slides} />
@@ -97,37 +96,37 @@ export default function LandingPage(){
                     <a className={css.buttonTelephone} href="tel:+1-346-342-1652" >(346) 342-1652</a>
                     <br />
                     <br />
-                    <h2>Business Hours</h2> 
+                    <h2>{t("business_hours")}</h2> 
                     <div style={containerStyle} className='img-fluid'>
                         <table className="table table-striped font-weight-bold"> 
                         <tbody>
                             <tr>  
-                            <td>Monday</td>
+                            <td>{t("monday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Tuesday</td>
+                            <td>{t("tuesday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Wednesday</td>
+                            <td>{t("wednesday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Thursday</td>
+                            <td>{t("thursday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Friday  </td>
+                            <td>{t("friday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Saturday  </td>
+                            <td>{t("saturday")}</td>
                             <td>9:00 AM – 8:00 PM</td>
                             </tr>
                             <tr>  
-                            <td>Sunday  </td>
-                            <td>Closed</td>
+                            <td>{t("sunday")}</td>
+                            <td>{t("closed")}</td>
                             </tr>
                         </tbody>
                         </table>

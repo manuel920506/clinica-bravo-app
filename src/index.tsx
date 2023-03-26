@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
@@ -8,8 +8,7 @@ import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import './index.css';
-import App from './App'; 
-import ErrorBundary from './ErrorBundary';
+import App from './App';  
 
 i18next
   .use(HttpApi)
@@ -31,13 +30,18 @@ i18next
   });
 
   
+  const loadingMarkup = (
+    <div className="py-4 text-center">
+      <h3>Loading..</h3>
+    </div>
+  )
 
 ReactDOM.render(
-  <React.StrictMode> 
-    <ErrorBundary> 
-      <App />
-     </ErrorBundary> 
-  </React.StrictMode>,
+  <Suspense fallback={loadingMarkup}>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+  </Suspense>,
   document.getElementById('root')
 );
 
