@@ -1,0 +1,15 @@
+npx create-react-app my-first-app --template typescript 
+npm i react-router-dom@5.2
+npm i --save-dev @types/react-router-dom
+ inside to file /tsconfig.json add=> "useUnknownInCatchVariables": false,
+npm i bootstrap@4.6
+npm i react-router-dom@5.2
+npm i --save-dev @types/react-router-dom
+npm install i18next --save
+npm install react-i18next
+npm install i18next-browser-languagedetector
+npm install i18next-http-backend
+npm i flag-icon-css
+npm install js-cookie
+npm i --save-dev @types/js-cookie
+npm install classnames --save
