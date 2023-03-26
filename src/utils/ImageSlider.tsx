@@ -8,7 +8,8 @@ export default function ImageSlider(props: imageSliderProps){
         borderRadius: '10px',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        backgroundImage: `url(${props.slides[currentIndex].src})`
+        backgroundImage: `url(${props.slides[currentIndex].src})`, 
+        transitionDuration: '1s'
     };
     const sliderStyles = { 
         height: '100%',
@@ -24,6 +25,7 @@ export default function ImageSlider(props: imageSliderProps){
         zIndex: 1,
         cursor: 'pointer'  
     };
+    
     const rightArrowStyles = { 
         position: 'absolute' as 'absolute',
         top: '50%',
