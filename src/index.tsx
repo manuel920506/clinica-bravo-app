@@ -9,6 +9,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import './index.css';
 import App from './App'; 
+import ErrorBundary from './ErrorBundary';
 
 i18next
   .use(HttpApi)
@@ -27,11 +28,15 @@ i18next
     backend: {
       loadPath: '/assets/locales/{{lng}}/translation.json',
     },
-  })
+  });
+
+  
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode> 
+    <ErrorBundary> 
+      <App />
+     </ErrorBundary> 
   </React.StrictMode>,
   document.getElementById('root')
 );
