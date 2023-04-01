@@ -20,16 +20,15 @@ i18next
     debug: false,
     // Options for language detector
     detection: {
-      order: ['path', 'cookie', 'htmlTag'],
+      order: ['cookie', 'localStorage', 'path','htmlTag'],
       caches: ['cookie'],
     },
-    // react: { useSuspense: false },
+    react: { useSuspense: false },
     backend: {
       loadPath: '/assets/locales/{{lng}}/translation.json',
-    },
+    }
   });
-
-  
+ 
   const loadingMarkup = (
     <div className="py-4 text-center">
       <h3>Loading..</h3>

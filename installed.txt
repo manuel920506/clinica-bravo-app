@@ -13,3 +13,4 @@ npm i flag-icon-css
 npm install js-cookie
 npm i --save-dev @types/js-cookie
 npm install classnames --save
+npm i react-bootstrap
