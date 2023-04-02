@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
+import DropdownLenguages from "./DropdownLenguages";
 
 export default function Menu(){
     const activeClass = "active";
+    const { t } = useTranslation();
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-primary">
             <div className="container-fluid">
-                <NavLink className="navbar-brand" activeClassName={activeClass}  to="/">Inicio</NavLink>
+                <NavLink className="navbar-brand" activeClassName={activeClass}  to="/">{t("start")}</NavLink>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
@@ -13,6 +16,7 @@ export default function Menu(){
                         </li> 
                     </ul>
                 </div>
+                <DropdownLenguages />
             </div>
         </nav> 
     )
