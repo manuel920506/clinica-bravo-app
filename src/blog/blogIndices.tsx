@@ -6,7 +6,7 @@ import { topicDTO } from "./blog.model";
 export default function Blog(){ 
     useEffect(() => {
         axios.get(urlTopics)
-        .then((response: AxiosResponse<any>) => {
+        .then((response: AxiosResponse<topicDTO>) => {
             console.log(response.data);
         })
 
