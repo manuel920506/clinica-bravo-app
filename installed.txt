@@ -28,3 +28,5 @@ Build started...
 Build succeeded.
 To undo this action, use Remove-Migration.
 PM> Update-Database
+Add-Migration UsersSystem
+Update-Database

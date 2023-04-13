@@ -7,7 +7,7 @@ import { userCredentials } from "./auth.model";
 
 export default function FormAuth(props: formularioAuthProps){
     return (
-        <Formik initialValues={props.modelo}
+        <Formik initialValues={props.model}
         onSubmit={props.onSubmit} 
          validationSchema={Yup.object({
              email: Yup.string().required('Este campo es requerido')
@@ -20,8 +20,8 @@ export default function FormAuth(props: formularioAuthProps){
                    <FormGroupText label="Email" field="email" />
                    <FormGroupText label="Password" field="password" type="password" />
 
-                    <Button disabled={formikProps.isSubmitting} type="submit">Enviar</Button>
-                    <Link className="btn btn-secondary" to="/">Cancelar</Link>
+                    <Button disabled={formikProps.isSubmitting} type="submit">Send</Button>
+                    <Link className="btn btn-secondary" to="/">Cancel</Link>
 
                </Form>
            )} 
@@ -30,6 +30,6 @@ export default function FormAuth(props: formularioAuthProps){
 }
 
 interface formularioAuthProps{
-    modelo: userCredentials;
-    onSubmit(valoreS: userCredentials, acciones: FormikHelpers<userCredentials>): void;
+    model: userCredentials;
+    onSubmit(values: userCredentials, actions: FormikHelpers<userCredentials>): void;
 }
