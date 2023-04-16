@@ -11,5 +11,10 @@
     "saturday": "Sabato",
     "sunday": "Domenica",
     "closed": "Chiuso",
-    "start": "Inizio"
+    "start": "Inizio",
+    "notAuthorized": "Non sei autorizzato!",
+    "fieldRequired": "Questo campo è obbligatorio.",
+    "putValidEmail": "Devi inserire una email valida.",
+    "send": "Inviare",
+    "cancel": "Annulla"
 }

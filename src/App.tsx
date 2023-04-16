@@ -3,16 +3,22 @@ import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom'; 
 import Menu from './utils/Menu';
 import routes from './route-config'; 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AuthenticationContext from './auth/AuthenticationContext'; 
 import { claim } from './auth/auth.model'; 
 import NotAuthorized from './auth/NotAuthorized';
+import { getClaims } from './auth/handleJWT';
+import { configInterceptors } from './utils/Interceptors';
+
+configInterceptors();
 
 function App() { 
-  const[claims, setClaims] = useState<claim[]>([
-    {name: 'email', value: 'manuel.rodriguez15@libero.it'}
-    ,{name: 'role', value: 'admin'}
-  ]);
+  const[claims, setClaims] = useState<claim[]>([]);
+
+  useEffect(() => {
+    setClaims(getClaims());
+  }, [])
+
   function update(claims: claim[]){
     setClaims(claims);
   }
