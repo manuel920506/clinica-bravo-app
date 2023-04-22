@@ -22,7 +22,7 @@ export default function FormAuth(props: formularioAuthProps){
                    <FormGroupText label="Email" field="email" />
                    <FormGroupText label="Password" field="password" type="password" />
 
-                    <Button disabled={formikProps.isSubmitting} type="submit" style={{marginRight: "6px"}} >{t("send")}</Button>
+                    <Button disabled={formikProps.isSubmitting} type="submit" >{t("send")}</Button> 
                     <Link className="btn btn-secondary" to="/">{t("cancel")}</Link>
                </Form>
            )} 

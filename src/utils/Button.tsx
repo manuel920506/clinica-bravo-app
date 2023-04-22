@@ -19,10 +19,9 @@ interface buttonProps{
     style: CSSProperties; 
 }
 
-
 Button.defaultProps = {
     type: "button",
     disabled: false,
     className: 'btn btn-primary',
-    style: null
+    style: {marginRight: "6px"}
 }
