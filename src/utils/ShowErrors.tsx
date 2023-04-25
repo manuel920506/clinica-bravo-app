@@ -47,7 +47,7 @@ export default function ShowErrors(props: showErrorsProps){
 		if(arr.length > 0){ 
             setErrors(arr);
         }
-	}, [arr]);
+	}, [props.errors]);
     return(
         <> 
             {errors ? <ul style={style}>
