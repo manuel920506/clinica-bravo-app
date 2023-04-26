@@ -22,6 +22,8 @@ export default function FormTopics(props: formTopicsProps) {
                     {/* <FormGroupImage field="photo" label="Photo" imgURL={props.model.url} />  */}
                     <FormGroupText field="name" label="Name" /> 
 
+                    <FormGroupImage field="url" label="Photo" />
+
                     <Button disabled={formikProps.isSubmitting}
                         type="submit"
                     >Salvar</Button>

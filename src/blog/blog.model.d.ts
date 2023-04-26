@@ -8,8 +8,7 @@ export interface topicDTO {
 
 export interface topicCreationDTO {
     name: string;
-    url?: File;
-    url_string?: string;
+    photo?: string; 
     subTopics?: subTopicDTO[];
     order: number;
 }
@@ -25,7 +24,7 @@ export interface subTopicDTO {
 export interface subTopicCreationDTO { 
     name: string;
     description: string;
-    url?: File;
+    photo?: File;
     url_string?: string;
     order: number;
 }

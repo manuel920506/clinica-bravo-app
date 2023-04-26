@@ -15,21 +15,15 @@ export default function CreateTopic() {
     async function create(topic: topicCreationDTO){
         try{ 
             console.log('JSON.stringify(topic)',JSON.stringify(topic));
-            const formData = convertTopicToFormData(topic);
-            // console.log('formData',formData);
-            console.log('create con url: ', urlTopics);
-            // await axios({
-            //     method: 'post',
-            //     url: urlTopics,
-            //     data: formData,
-            //     headers: { "Content-Type": "multipart/form-data" },
-            // }).then((respuesta: AxiosResponse<number>) => {
-            //     history.push(`/Blog/${respuesta.data}`);
-            // })
-
-                    await axios.post(urlTopics, topic).then((respuesta: AxiosResponse<number>) => {
-                history.push(`/Blog/${respuesta.data}`);
-            })
+            const formData = convertTopicToFormData(topic); 
+            await axios({
+                method: 'post',
+                url: urlTopics,
+                data: formData,
+                headers: {'Content-Type': 'multipart/form-data'}
+            }).then((response: AxiosResponse<number>) => {
+                history.push(`/Blog/${response.data}`);
+            }); 
         }
         catch (error){
             setErrors(error.response.data);

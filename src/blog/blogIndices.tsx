@@ -1,13 +1,13 @@
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import { urlTopics } from "../utils/endpoints";
-import { topicDTO } from "./blog.model";
-import { Button } from "react-bootstrap";
+import { topicDTO } from "./blog.model"; 
 import Authorized from "../auth/Authorized"; 
 import { Link } from "react-router-dom";
+import ListTopics from "./ListTopics";
 
 export default function Blog(){ 
-    const [topics, setTopics] = useState<topicDTO>()
+    const [topics, setTopics] = useState<topicDTO[]>()
 
     useEffect(() => {
         loadData();
@@ -15,7 +15,7 @@ export default function Blog(){
 
     function loadData() {
         axios.get(urlTopics)
-        .then((response: AxiosResponse<topicDTO>) => {
+        .then((response: AxiosResponse<topicDTO[]>) => {
             console.log(response.data);
             setTopics(response.data);
         })
@@ -25,6 +25,7 @@ export default function Blog(){
             <h3>Blog in construction....</h3> 
             <div className='container'>  
                 <Authorized authorized={<><Link className="btn btn-primary" to="/blog/create">+</Link></>}/>
+                <ListTopics topics={topics} />
             </div>
         </>
 
