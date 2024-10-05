@@ -27,6 +27,7 @@
 }
 
 .buttonTelephone{
+    display: inline-block; 
     background-color: blue;
     color: white;
     padding: 15px 40px;
@@ -37,7 +38,9 @@
     cursor: pointer;
     user-select: none; 
     transition: all 0.2s ease-in-out;
-    position: relative;
+    position: relative; 
+    height: 30px;
+    line-height: 0px;
 }
 .buttonTelephone:hover{ 
     box-shadow: 0 0 30px 0 blue;

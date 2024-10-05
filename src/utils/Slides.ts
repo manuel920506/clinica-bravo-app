@@ -7,9 +7,9 @@ import photo6 from  '../photos/photo6.jpg';
 import photo9 from  '../photos/photo9.jpg'; 
 import photo10 from '../photos/photo10.jpg';  
 import photo12 from '../photos/photo12.jpg'; 
-import { slide } from './ImageSlider';
+import { Slide } from './ImageSlider';
 
-export const slides: slide[] = [
+export const slides: Slide[] = [
     {src: photo0 },
     {src: photo1 }, 
     {src: photo3 },

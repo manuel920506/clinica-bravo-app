@@ -35,7 +35,6 @@ return(
                     <MapGoogle path={srcMap} />
                 </div>  
                 <p className="fw-bold">8795 Antoine Drive Houston, TX 77088 USA</p>  
-                <a className={css.buttonTelephone} href="tel:+1-346-342-1652" >(346) 342-1652</a>
                 <br />
                 <br /> 
                     <Orario style={containerStyle} />

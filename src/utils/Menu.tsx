@@ -6,6 +6,7 @@ import Button from "./Button";
 import AuthenticationContext from "../auth/AuthenticationContext";
 import { useContext } from "react";
 import { logout } from "../auth/handleJWT";
+import css from './../home/home.module.css';  
 
 export default function Menu(){
     const activeClass = "active";
@@ -20,7 +21,9 @@ export default function Menu(){
             <div className="container-fluid">
 
                 <div className="d-flex flex-row">
-                    <NavLink className="navbar-brand" activeClassName={activeClass}  to="/">{t("start")}</NavLink>
+                    
+                <a className={css.buttonTelephone} href="tel:+1-346-342-1652" >(346) 342-1652</a>
+                    {/* <NavLink className="navbar-brand" activeClassName={activeClass}  to="/">{t("start")}</NavLink>
                     
                     <div className="collapse navbar-collapse">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -28,7 +31,7 @@ export default function Menu(){
                                 <NavLink className="nav-link" activeClassName={activeClass} to="/blog">Blog</NavLink>
                             </li> 
                         </ul>
-                    </div>
+                    </div> */}
                 </div> 
 
                 <div className="d-flex">
